@@ -13,7 +13,7 @@ def choose(request):
     return render(request, "choose.html")
 
 def sitemap(request):
-    return HttpResponse(open('templates/sitemap.xml').read(), content_type='text/xml')
+    return HttpResponse(open('sitemap.xml').read(), content_type='text/xml')
 
 def mediation(request):
     return render(request, "mediation.html")
