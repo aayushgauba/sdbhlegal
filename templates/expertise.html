@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Area of Expertise - SDBH Legal Associates</title>
+    <meta name="description" content="At SDBH Legal Associates, we specialize in Family Law, Matrimonial Litigations, Mutual Consent Divorce (Indian and NRI), and Contested Divorce. Our compassionate and professional team provides expert legal advice on divorce, child custody, alimony, and more. We handle sensitive matrimonial disputes with care, ensuring fair and effective representation for all our clients.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00264d;
+            --secondary-color: #f0f5ff;
+            --accent-color: #ffcc00;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        .hero {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .expertise-card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .expertise-card .card-header {
+            background-color: var(--primary-color);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                <img src="https://www.sdbhlegal.com/wp-content/uploads/2024/07/cropped-sdbh-logo.png" alt="SDBH Legal Associates Logo" class="img-fluid me-2" style="max-width: 40px;">
+                <span>SDBH Legal Associates</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"><a class="nav-link active" href="{% url 'index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'expertise' %}">Our Area of Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'choose' %}">Why Choose us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'mediation' %}">Mediation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center">
+        <div class="container">
+            <h1>Our Area of Expertise</h1>
+            <p class="lead">What We Do at SDBH Legal Associates</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <section id="expertise">
+            
+            <div class="accordion" id="expertiseAccordion">
+                <div class="expertise-card">
+                    <div class="card-header" id="headingFamilyLaw" data-bs-toggle="collapse" data-bs-target="#collapseFamilyLaw">
+                        <h2 class="mb-0">Family Law</h2>
+                    </div>
+                    <div id="collapseFamilyLaw" class="collapse show" aria-labelledby="headingFamilyLaw" data-bs-parent="#expertiseAccordion">
+                        <div class="card-body">
+                            <p>We provide compassionate and effective legal advice on divorce, child custody, and alimony matters.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header" id="headingMatrimonial" data-bs-toggle="collapse" data-bs-target="#collapseMatrimonial">
+                        <h2 class="mb-0">Matrimonial Litigations</h2>
+                    </div>
+                    <div id="collapseMatrimonial" class="collapse" aria-labelledby="headingMatrimonial" data-bs-parent="#expertiseAccordion">
+                        <div class="card-body">
+                            <p>Our firm deals with mutual consent divorce, contested divorce, maintenance, child custody, judicial separations, divorce cases of NRI's, counseling, etc. We understand the delicate and sensitive nature of matrimonial disputes, including issues like hurt feelings, disputes among couples, fidelity disputes, and financial adjustments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header" id="headingMutualDivorce" data-bs-toggle="collapse" data-bs-target="#collapseMutualDivorce">
+                        <h2 class="mb-0">Mutual Consent Divorce (Indian)</h2>
+                    </div>
+                    <div id="collapseMutualDivorce" class="collapse" aria-labelledby="headingMutualDivorce" data-bs-parent="#expertiseAccordion">
+                        <div class="card-body">
+                            <p>Mutual divorce is common between parties with free consent, understanding, and defusing matrimonial disputes including care and upbringing of children with mutual understanding.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header" id="headingNRIDivorce" data-bs-toggle="collapse" data-bs-target="#collapseNRIDivorce">
+                        <h2 class="mb-0">Mutual Consent Divorce (NRI's)</h2>
+                    </div>
+                    <div id="collapseNRIDivorce" class="collapse" aria-labelledby="headingNRIDivorce" data-bs-parent="#expertiseAccordion">
+                        <div class="card-body">
+                            <p>Our firm serves NRI's for mutual divorce and other matrimonial disputes. We give special attention as we know that NRI's often find themselves in complex situations, sometimes affecting their overseas immigration status/career. NRI clients need not visit India for mutual divorce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header" id="headingContestedDivorce" data-bs-toggle="collapse" data-bs-target="#collapseContestedDivorce">
+                        <h2 class="mb-0">Contested Divorce</h2>
+                    </div>
+                    <div id="collapseContestedDivorce" class="collapse" aria-labelledby="headingContestedDivorce" data-bs-parent="#expertiseAccordion">
+                        <div class="card-body">
+                            <p>If parties have strong issues/reservations against each other, the interested party may approach our firm for a contested divorce or legal remedies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header" id="headingMediation" data-bs-toggle="collapse" data-bs-target="#collapseMediation">
+                        <h2 class="mb-0">Mediation</h2>
+                    </div>
+                    <div id="collapseMediation" class="collapse" aria-labelledby="headingMediation" data-bs-parent="#expertiseAccordion">
+                        <div class="card-body">
+                            <p>Mediation in India has become a viable alternative to traditional litigation, supported by a growing legal framework and increasing acceptance among disputants. Our expertise in mediation covers:</p>
+                            <ul>
+                                <li>Legal Framework and Statutory Provisions</li>
+                                <li>Court-Referred Mediation</li>
+                                <li>Confidentiality in Mediation Proceedings</li>
+                                <li>Mediator's Role and Qualifications</li>
+                                <li>Mediation Agreements and Their Enforceability</li>
+                                <li>Various Types of Disputes Suitable for Mediation</li>
+                                <li>Institutional Support for Mediation</li>
+                                <li>Cost-Effectiveness and Accessibility of Mediation</li>
+                                <li>Pre-Litigation Mediation for Commercial Disputes</li>
+                            </ul>
+                            <p>We are committed to promoting mediation as an efficient and amicable means of dispute resolution, offering our clients a pathway to resolve conflicts effectively and economically.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="text-center py-4">
+        <div class="container">
+
+            <div class="social-icons mt-3">
+                <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

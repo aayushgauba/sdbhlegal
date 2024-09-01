@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SDBH Legal Associates</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Learn about SDBH Legal Associates, a leading law firm specializing in mediation services. Discover our expertise in facilitating amicable resolutions through fair and accessible mediation, supported by a robust legal framework in India.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00264d;
+            --secondary-color: #f0f5ff;
+            --accent-color: #ffcc00;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        .hero {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .about-image {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                <img src="https://www.sdbhlegal.com/wp-content/uploads/2024/07/cropped-sdbh-logo.png" alt="SDBH Legal Associates Logo" class="img-fluid me-2" style="max-width: 40px;">
+                <span>SDBH Legal Associates</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"><a class="nav-link active" href="{% url 'index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'expertise' %}">Our Area of Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'choose' %}">Why Choose us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'mediation' %}">Mediation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center">
+        <div class="container">
+            <h1>Mediation</h1>
+            <p class="lead">Facilitating amicable resolutions through fair and accessible mediation services</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <section id="mediation" class="mb-5">
+            <h2 class="section-title">Mediation</h2>
+            <p>Mediation in India has become a viable alternative to traditional litigation, supported by a growing legal framework and increasing acceptance among disputants. Here are the key legal aspects of mediation in India:</p>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <h3>1. Legal Framework</h3>
+                    <p><strong>Statutory Provisions:</strong></p>
+                    <ul>
+                        <li>The Civil Procedure Code (CPC), 1908: Section 89 and Order X Rule 1A empower courts to refer disputes to ADR methods, including mediation.</li>
+                        <li>Commercial Courts Act, 2015: It mandates pre-institution mediation for commercial disputes of a specified value.</li>
+                    </ul>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>2. Court-Referred Mediation</h3>
+                    <p><strong>Mandatory Mediation:</strong> Certain cases, particularly under the Commercial Courts Act, require parties to undergo mediation before they can approach the courts.</p>
+                    <p><strong>Judicial Mediation:</strong> Courts in India actively encourage mediation and have set up mediation centers within court premises to facilitate this.</p>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>3. Confidentiality</h3>
+                    <p><strong>Confidentiality Clauses:</strong> Mediation proceedings are confidential, and statements made during mediation are not admissible in subsequent court proceedings.</p>
+                    <p><strong>Legal Protection:</strong> Indian courts uphold the confidentiality of mediation, recognizing it as a crucial element for the process’s success.</p>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>4. Mediator’s Role and Qualifications</h3>
+                    <p><strong>Neutrality and Impartiality:</strong> Mediators must remain neutral and cannot impose solutions on the parties.</p>
+                    <p><strong>Accreditation and Training:</strong> Various institutions provide training and accreditation for mediators. The Mediation and Conciliation Project Committee (MCPC) under the Supreme Court of India oversees the standards and training of mediators.</p>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>5. Mediation Agreement</h3>
+                    <p><strong>Binding Nature:</strong> If parties settle, the agreement is drafted, and signed by the parties, and can be made an order of the court, making it enforceable.</p>
+                    <p><strong>Legal Enforceability:</strong> A mediated settlement agreement can be enforced under Section 74 of the Arbitration and Conciliation Act, 1996, akin to an arbitral award.</p>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>6. Types of Disputes</h3>
+                    <ul>
+                        <li><strong>Family Disputes:</strong> Mediation is extensively used in matrimonial disputes, custody issues, and other family matters.</li>
+                        <li><strong>Commercial Disputes:</strong> Pre-institution mediation for commercial disputes is mandatory under the Commercial Courts Act.</li>
+                        <li><strong>Civil Disputes:</strong> Property disputes, contractual issues, and other civil matters often see mediation as a preferred route.</li>
+                    </ul>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>7. Institutional Support</h3>
+                    <p><strong>Mediation Centers:</strong> Various High Courts and District Courts have established mediation centers. The Supreme Court has its mediation center to handle matters referred by it.</p>
+                    <p><strong>MCPC:</strong> The Mediation and Conciliation Project Committee plays a pivotal role in promoting and institutionalizing mediation across India.</p>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>8. Costs and Accessibility</h3>
+                    <p><strong>Cost-Effective:</strong> Mediation is generally more cost-effective than litigation. Court-referred mediation in court-annexed centers is often free or nominally charged.</p>
+                    <p><strong>Access to Justice:</strong> Mediation is seen as a tool to enhance access to justice by providing a quicker resolution mechanism.</p>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>9. Pre-Litigation Mediation</h3>
+                    <p><strong>Commercial Disputes:</strong> As mandated by the Commercial Courts Act, pre-institution mediation is a necessary step for certain commercial disputes, aiming to reduce the burden on courts and promote amicable settlements.</p>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <h3>10. Challenges and Developments</h3>
+                    <p><strong>Awareness and Acceptance:</strong> Despite growing acceptance, there is still a need for greater awareness among the public and the legal fraternity about the benefits of mediation.</p>
+                    <p><strong>Legislative Developments:</strong> Ongoing discussions about further legislative measures to strengthen and streamline mediation practices continue to shape the legal landscape in India.</p>
+                </div>
+            </div>
+            <p><strong>Conclusion:</strong> Mediation in India is supported by a robust legal framework that emphasizes its voluntary, confidential, and binding nature. With growing institutional support and legislative backing, mediation is poised to play an increasingly important role in the Indian legal system, offering an efficient and amicable means of dispute resolution.</p>
+        </section>
+        
+    </main>
+
+    <footer id="contact" class="text-center py-4">
+        <div class="container">
+
+            <div class="social-icons mt-3">
+                <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

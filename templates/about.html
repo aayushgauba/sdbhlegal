@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SDBH Legal Associates</title>
+    <meta name="description" content="Discover Sarbat Da Bhala Legal Associates, dedicated to ensuring fair access to legal justice for underserved communities. Learn about our mission and core values.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00264d;
+            --secondary-color: #f0f5ff;
+            --accent-color: #ffcc00;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        .hero {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .about-image {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2rem 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                <img src="https://www.sdbhlegal.com/wp-content/uploads/2024/07/cropped-sdbh-logo.png" alt="SDBH Legal Associates Logo" class="img-fluid me-2" style="max-width: 40px;">
+                <span>SDBH Legal Associates</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active"><a class="nav-link active" href="{% url 'index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'expertise' %}">Our Area of Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'choose' %}">Why Choose us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'mediation' %}">Mediation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center">
+        <div class="container">
+            <h1>About Sarbat Da Bhala Legal Associates</h1>
+            <p class="lead">Impacting society positively through fair access to legal justice</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <section id="about" class="mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://www.sdbhlegal.com/wp-content/uploads/2024/08/Law-Firm-Home-image-1024x1024.jpg" alt="SDBH Legal Team" class="img-fluid about-image">
+                    <!-- Replace the above line with your actual image once available -->
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p>Sarbat Da Bhala Legal Associates, abbreviated as SDBH, was established to impact society positively. Our primary aim is to ensure fair access to legal justice for underserved communities and to aid the judicial system by offering mediation services.</p>
+                    <p>At SDBH, we believe that everyone deserves equal representation and a fair chance at justice. Our team of dedicated legal professionals works tirelessly to bridge the gap between complex legal processes and those who need assistance the most.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="values" class="mb-5">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h3>Fairness</h3>
+                    <p>We strive to ensure that justice is accessible to all, regardless of their background or circumstances.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3>Compassion</h3>
+                    <p>We approach each case with empathy, understanding the human aspect behind every legal challenge.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3>Excellence</h3>
+                    <p>We are committed to providing top-notch legal services and continuously improving our skills.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="text-center py-4">
+        <div class="container">
+            <div class="social-icons mt-3">
+                <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
