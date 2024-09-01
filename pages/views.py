@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
 def index(request):
     return render(request, "index.html")
@@ -11,6 +11,9 @@ def expertise(request):
 
 def choose(request):
     return render(request, "choose.html")
+
+def sitemap(request):
+    return HttpResponse(open('templates/sitemap.xml').read(), content_type='text/xml')
 
 def mediation(request):
     return render(request, "mediation.html")
