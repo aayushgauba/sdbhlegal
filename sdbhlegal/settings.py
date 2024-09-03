@@ -68,7 +68,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sdbhlegal.wsgi.application'
+STATIC_URL = '/static/'
 
+# Directory where Django will look for static files
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Ensure this path is correct
+]
+
+# Directory where static files will be collected (for production)
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
