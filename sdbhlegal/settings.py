@@ -82,6 +82,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sdbhlegal@outlook.com'
+EMAIL_HOST_PASSWORD = 'rfvtgbyhnujmik123'
+DEFAULT_FROM_EMAIL = 'sdbhlegal@outlook.com'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
