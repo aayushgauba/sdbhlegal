@@ -30,6 +30,16 @@ def send_email_task():
         )
         email.attach_alternative(html_content, "text/html")
         email.send()
+        html_content = render_to_string('clientEmail.html', {
+            'contact':contact
+        })
+        email = EmailMultiAlternatives(
+            subject=f"New Request Recieved",
+            body=contact.message,
+            to=['gauba.aayush@gmail.com'],
+        )
+        email.attach_alternative(html_content, "text/html")
+        email.send()
         contact.mailSent = True
         contact.save()
 
