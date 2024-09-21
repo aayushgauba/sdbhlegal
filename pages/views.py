@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from .models import Contact
 from indexnow import IndexNow
 import requests
+import os
 
 def index(request):
     updated_url = "https://www.sdbhlegal.com"
@@ -28,7 +29,10 @@ def choose(request):
     return render(request, "choose.html")
 
 def sitemap(request):
-    return HttpResponse(open('sitemap.xml').read(), content_type='text/xml')
+    file_path = os.path.join(os.path.dirname(__file__), 'sitemap.xml')
+    with open(file_path, 'r') as file:
+        content = file.read()
+    return HttpResponse(content, content_type='text/xml')
 
 def mediation(request):
     updated_url = "https://www.sdbhlegal.com/mediation"
