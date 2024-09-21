@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .models import Contact
 from indexnow import IndexNow
+import requests
 import os
 
 indexnow = IndexNow(key="76dfebe7687d4416a7d5cd0eda143fc8", host="sdbhlegal.com")
